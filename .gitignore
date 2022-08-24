@@ -1,0 +1,8 @@
+# ignore all the cache
+/metodos/__pycache__
+/metodos/backend/__pycache__
+/metodosNumericos/__pycache__
+
+# ignore migrations as we dont need databases
+/metodos/migrations
+
