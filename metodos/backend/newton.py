@@ -31,6 +31,7 @@ def doNewton(tol, x, niter, df, f):
 x_test = 0
 tol_test = 0.001
 niter_test = 15
-f_test = 'e(-x)-x'
-fDerivada_test = '-e(-x)-1'
+#f_test = 'e(-x)-x'
+f_test = 'x**2-2*x+2-e(x)'
+fDerivada_test = '2*x-2-e(x)'
 doNewton(tol_test, x_test, niter_test, fDerivada_test, f_test)
