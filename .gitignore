@@ -2,6 +2,7 @@
 /metodos/__pycache__
 /metodos/backend/__pycache__
 /metodosNumericos/__pycache__
+.vscode/
 
 # ignore migrations as we dont need databases
 /metodos/migrations

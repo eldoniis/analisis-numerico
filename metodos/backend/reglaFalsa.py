@@ -12,7 +12,7 @@ def e(x):
 def ln(x):
     return np.log(x)
 
-def doBiseccion(x, xs, tol, niter, f):
+def doReglaFalsa(x, xs, tol, niter, f):
     fxi = eval(f)
     aux = x
     x = xs #* Para evaluar con xs lo debemos llamar x
@@ -25,7 +25,7 @@ def doBiseccion(x, xs, tol, niter, f):
         print('{xs} es raiz'.format(xs=xs))
         return '{xs} es raiz'.format(xs=xs)
     elif fxi * fxs < 0:
-        xm = (x + xs)/2
+        xm = (x) - ((fxi * (x - xs)) / (fxi - fxs))
         aux = x #* Auxiliar para guardar el valor de x
         x = xm #* Para evaluar con xm lo debemos llamar x
         fxm = eval(f)
@@ -40,7 +40,7 @@ def doBiseccion(x, xs, tol, niter, f):
                 x = xm
                 fxi = fxm
             x_aux = xm
-            xm = (x + xs)/2
+            xm = xm = (x) - ((fxi * (x - xs)) / (fxi - fxs))
             aux = x #* Auxiliar para guardar el valor de x
             x = xm #* Para evaluar con xm lo debemos llamar x
             fxm = eval(f)
@@ -62,4 +62,4 @@ xs_test = 3
 tol_test = 0.5*10**-3
 niter_test = 11
 f_test = 'e(3*x-12)+x*cos(3*x)-(x**2)+4'
-doBiseccion(x_test, xs_test, tol_test, niter_test, f_test)
+doReglaFalsa(x_test, xs_test, tol_test, niter_test, f_test)
