@@ -1,5 +1,5 @@
 import numpy as np
-import math
+from math import sqrt
 
 def cos(x):
     return np.cos(x)
