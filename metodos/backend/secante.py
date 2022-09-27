@@ -1,3 +1,5 @@
+ #* Super lineal 1,62
+
 import numpy as np
 from math import sqrt
 
@@ -26,7 +28,6 @@ def doSecante(tol, x, x1, niter, f):
         error = tol + 1
         den = fx1 - fx0
         while(error > tol and fx1 != 0 and den != 0 and cont < niter):
-            # x2 = (x1 - fx1 * (x1 - x))/den
             x2 = x1 - ((fx1 * (x1 - x)) / (den))
             error = abs(x2-x1)
             x = x1

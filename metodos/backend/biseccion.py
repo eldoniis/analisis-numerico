@@ -53,9 +53,9 @@ def doBiseccion(x, xs, tol, niter, f):
         elif error < tol:
             print('{xm} es una aproximacion a una raiz con una tolerancia igual a {tol}'.format(xm=xm, tol=tol))
             return '{xm} es una aproximacion a una raiz con una tolerancia igual a {tol}'.format(xm=xm, tol=tol)
-        else:
-            print('El intervalo es inadecuado')
-            return 'El intervalo es inadecuado'
+    else:
+        print('El intervalo es inadecuado')
+        return 'El intervalo es inadecuado'
 
 x_test = 2
 xs_test = 3

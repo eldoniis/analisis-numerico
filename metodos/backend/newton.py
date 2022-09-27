@@ -1,3 +1,7 @@
+
+#* Es conocido como el metodo de las tangentes
+#* Solo garantiza en multiplicidad 1 que la convergencia sea cuadratica
+
 import numpy as np
 from math import sqrt
 
@@ -12,18 +16,19 @@ def e(x):
 def ln(x):
     return np.log(x)
 
+
 def doNewton(tol, x, niter, df, f):
     x1 = x - (eval(f)/eval(df))
     error = abs(x1-x)
     cont = 0
-    while tol < error and cont < niter:
+    while tol < error and cont < niter: 
         x = x1
         x1 = x - (eval(f)/eval(df))
         error = abs(x1-x)
         cont += 1
     if error <= tol:
         print('{x1} aproximación a una raíz con una tolerancia {tol}'.format(x1=x1, tol=tol))
-        return '{x1} es punto fijo  con {tol}'.format(x1=x1, tol=tol)
+        return '{x1} aproximación a una raíz con una tolerancia {tol}'.format(x1=x1, tol=tol)
     else:
         print('No se encontró solución')
         return 'No se encontró solución'

@@ -1,5 +1,14 @@
+
+#* Multiplicidad 0: Si al evaluar la funcion sin derivar nos da diferente de 0, si da uno sacamos derivada y seguimos
+#* Multiplicidad 1: Si da diferente de 0 es multipliidad 1, si da 0 repetimos proceso
+#* (x-3)^4(x+4)^2(x-2)(x^2+x+1)
+#* En x=3 tiene multiplicidad 4
+#* En x=-4 tiene multiplicidad 2
+#* En x=2 tiene una raiz simple
+
 import numpy as np
-from math import sqrt
+import math 
+from math import sqrt, inf
 
 def cos(x):
     return np.cos(x)
@@ -14,7 +23,7 @@ def ln(x):
 
 
 def doRaicesMultiples(f,f1, f2,x0,tol,niter):
-    
+
     #se inicializa los valores iniciales
     x = x0
     fun = f
@@ -30,7 +39,7 @@ def doRaicesMultiples(f,f1, f2,x0,tol,niter):
            break
         error = abs(x)
         x = x - (func * func_prima) / ( (func_prima**2) - (func * func_2prima))
-        
+
         fun = f
         func = eval(fun)
         fun_prima = f1

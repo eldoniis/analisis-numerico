@@ -1,3 +1,9 @@
+
+#* Igualamos a 0 y luego debemos despejar x de la funcion para hallar el g(x) y
+#* luego debemos encontrar la derivada de la funcion encontrada y evaluar todo intervalo en esta derivada esa es la K
+#* Si todas las K dan <1 nos sirve la funcion despejada
+#* Si 0.5 < K < 1 es mejor biseccion, si K = 0.5  es igual y si K < 0.5 es mejor punto fijo
+
 import numpy as np
 from math import sqrt
 
